@@ -55,7 +55,7 @@
 									<table class="table table-bordered table-hover admin_user_table" id="app_user_table" style="width:100% !important"> 
 										<thead>
 											<tr>
-												<th>Photo</th>
+												<th width="100">Photo</th>
 												<th>User ID</th>
 												<th>Name</th>
 												<th>Email </th>
@@ -136,8 +136,8 @@
 									<div class="ln_solid"></div>
 								</div>
 								<div class="col-md-3">
-									<img src="src" width="70%" height="70%" class="img-thumbnail" id="emp_img">
-									<input type="file" name="emp_image_upload" id="emp_image_upload"> 
+									<img src="src" width="70%" height="70%" class="img-thumbnail" id="app_user_img">
+									<input type="file" name="app_user_image_upload" id="app_user_image_upload"> 
 								</div>
 								</div>
 								<div class="form-group">
@@ -145,7 +145,7 @@
 								<div class="col-md-3 col-sm-3 col-xs-12">
 									<button type="submit" id="save_app_user_info" class="btn btn-success">Save</button>                    
 									<button type="button" id="clear_button" class="btn btn-warning">Clear</button>
-									<button type="button" id="cancle_app_user_update" class="btn btn-danger hide">Cancle</button>                    
+									<button type="button" id="cancle_app_user_update" class="btn btn-danger hidden">Cancle</button>                    
 								</div>
 								 <div class="col-md-7 col-sm-7 col-xs-12">
 									<div id="form_submit_error" class="text-center" style="display:none"></div>
@@ -166,6 +166,9 @@
 
 
 @section('JScript')
+<script>
+		var profile_image_url = "<?php echo asset('assets/images/user/app_user'); ?>";
+	</script>
 
 <script src="{{ asset('assets/js/bils/app user/app_user.js')}}"></script>
 <script>
